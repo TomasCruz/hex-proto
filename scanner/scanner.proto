@@ -1,0 +1,21 @@
+syntax = "proto3";
+package scanner;
+
+message RangeMsg {
+    int32 start = 1;
+    int32 end = 2;
+}
+
+message HexameterMsg {
+    int32 id = 1;
+    bool para = 2;
+    string txt = 3;
+}
+
+message HexMsg {
+    repeated HexameterMsg hexes = 1;
+}
+
+service Hex {
+    rpc GetHexes(RangeMsg) returns (HexMsg) {}
+}
