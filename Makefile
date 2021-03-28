@@ -2,7 +2,7 @@ all: clean scanner
 
 .PHONY: clean
 clean:
-	rm -fr scanner/*.go
+	rm -fr scanner/*.pb.go
 
 .PHONY: scanner
 scanner:
