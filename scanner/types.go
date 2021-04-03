@@ -18,13 +18,9 @@ type (
 		WordID int32
 	}
 
-	ArrHexWordsToExport struct {
-		HexWords []HexWordToExport
-	}
-
 	Translatable struct {
 		Words    []WordToExport
 		Hexes    []Hexameter
-		HexWords []ArrHexWordsToExport
+		HexWords []HexWordToExport
 	}
 )

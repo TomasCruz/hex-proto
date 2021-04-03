@@ -23,10 +23,6 @@ message HexWordMsg {
     int32 wordID = 3;
 }
 
-message ArrHexWordMsg {
-    repeated HexWordMsg hexWords = 1;
-}
-
 message WordMsg {
     int32 id = 1;
     string txt = 2;
@@ -35,7 +31,7 @@ message WordMsg {
 message ArrTranslatableMsg {
     repeated WordMsg words = 1;
     repeated HexMsg hexes = 2;
-    repeated ArrHexWordMsg hexWords = 3;
+    repeated HexWordMsg hexWords = 3;
 }
 
 message ScannedMsg {
