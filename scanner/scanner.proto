@@ -7,27 +7,24 @@ message RangeMsg {
     int32 end = 2;
 }
 
-message HexameterMsg {
-    int32 id = 1;
-    bool para = 2;
-    string txt = 3;
-}
-
 message HexMsg {
-    repeated HexameterMsg hexes = 1;
-}
-
-message HexWordsMsg {
-    int32 id = 1;
-    int32 order = 2;
-    int32 wordId = 3;
-}
-
-message ParsedMsg {
-    int32 id = 1;
+    int32 hexID = 1;
     bool para = 2;
     string txt = 3;
-    repeated HexWordsMsg hexWords = 4;
+}
+
+message ArrHexMsg {
+    repeated HexMsg hexes = 1;
+}
+
+message HexWordMsg {
+    int32 hexID = 1;
+    int32 order = 2;
+    int32 wordID = 3;
+}
+
+message ArrHexWordMsg {
+    repeated HexWordMsg hexWords = 1;
 }
 
 message WordMsg {
@@ -35,12 +32,23 @@ message WordMsg {
     string txt = 2;
 }
 
-message TranslatableMsg {
+message ArrTranslatableMsg {
     repeated WordMsg words = 1;
-    repeated ParsedMsg parsed = 3;
+    repeated HexMsg hexes = 2;
+    repeated ArrHexWordMsg hexWords = 3;
 }
 
-service Hex {
-    rpc GetHexes(RangeMsg) returns (HexMsg) {}
-    rpc GetTranslatable(google.protobuf.Empty) returns (TranslatableMsg) {}
+message ScannedMsg {
+    int32 hexID = 1;
+    string scanned = 2;
+}
+
+message ArrScannedMsg {
+    repeated ScannedMsg hexes = 1;
+}
+
+service Scanner {
+    rpc Hexes(RangeMsg) returns (ArrHexMsg) {}
+    rpc Translatable(google.protobuf.Empty) returns (ArrTranslatableMsg) {}
+    rpc Scanned(RangeMsg) returns (ArrScannedMsg) {}
 }

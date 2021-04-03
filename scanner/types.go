@@ -2,31 +2,29 @@ package scanner
 
 type (
 	Hexameter struct {
-		ID   int32
-		Para bool
-		Txt  string
+		HexID int32
+		Para  bool
+		Txt   string
 	}
 
 	WordToExport struct {
-		ID  int
+		ID  int32
 		Txt string
 	}
 
 	HexWordToExport struct {
-		ID     int
-		Order  int
-		WordID int
+		HexID  int32
+		Order  int32
+		WordID int32
 	}
 
-	ParsedToExport struct {
-		ID       int
-		Para     bool
-		Txt      string
+	ArrHexWordsToExport struct {
 		HexWords []HexWordToExport
 	}
 
 	Translatable struct {
-		Words  []WordToExport
-		Parsed []ParsedToExport
+		Words    []WordToExport
+		Hexes    []Hexameter
+		HexWords []ArrHexWordsToExport
 	}
 )
