@@ -11,6 +11,10 @@ message ArrLangMsg {
     repeated LangMsg languages = 1;
 }
 
+message CountMsg {
+    int32 count = 1;
+}
+
 message HexLangMsg {
     int32 hexID = 1;
     int32 langID = 2;
@@ -36,7 +40,7 @@ service Translator {
     rpc Languages(google.protobuf.Empty) returns (ArrLangMsg) {}
     rpc SetLanguage(LangMsg) returns (google.protobuf.Empty) {}
 
-    rpc HexWordCount(HWLangMsg) returns (HWTransMsg) {}
+    rpc HexWordCount(HWLangMsg) returns (CountMsg) {}
     rpc SetHWTrans(HWTransMsg) returns (google.protobuf.Empty) {}
 
     rpc W2WTrans(HexLangMsg) returns (TransMsg) {}

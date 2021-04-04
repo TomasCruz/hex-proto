@@ -11,6 +11,10 @@ type (
 		LangID int32
 	}
 
+	Count struct {
+		Count int32
+	}
+
 	HWLang struct {
 		HexLang HexLang
 		Order   int32
