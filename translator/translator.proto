@@ -36,7 +36,7 @@ service Translator {
     rpc Languages(google.protobuf.Empty) returns (ArrLangMsg) {}
     rpc SetLanguage(LangMsg) returns (google.protobuf.Empty) {}
 
-    rpc HWTrans(HWLangMsg) returns (HWTransMsg) {}
+    rpc HexWordCount(HWLangMsg) returns (HWTransMsg) {}
     rpc SetHWTrans(HWTransMsg) returns (google.protobuf.Empty) {}
 
     rpc W2WTrans(HexLangMsg) returns (TransMsg) {}
