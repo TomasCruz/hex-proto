@@ -7,20 +7,20 @@ type (
 		Txt   string
 	}
 
-	WordToExport struct {
+	Word struct {
 		ID  int32
 		Txt string
 	}
 
-	HexWordToExport struct {
+	HexWord struct {
 		HexID  int32
 		Order  int32
 		WordID int32
 	}
 
 	Translatable struct {
-		Words    []WordToExport
+		Words    []Word
 		Hexes    []Hexameter
-		HexWords []HexWordToExport
+		HexWords []HexWord
 	}
 )
