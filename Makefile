@@ -11,4 +11,4 @@ scanner:
 
 .PHONY: translator
 translator:
-	protoc --go_out=plugins=grpc:. translator/translator.proto
+	protoc --go_opt=Mscanner/scanner.proto=github.com/TomasCruz/hex-proto/scanner --go_out=plugins=grpc:. translator/translator.proto
