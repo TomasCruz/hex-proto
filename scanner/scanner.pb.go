@@ -26,8 +26,8 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 type RangeMsg struct {
-	Start                int32    `protobuf:"varint,1,opt,name=start,proto3" json:"start,omitempty"`
-	End                  int32    `protobuf:"varint,2,opt,name=end,proto3" json:"end,omitempty"`
+	Start                int64    `protobuf:"varint,1,opt,name=start,proto3" json:"start,omitempty"`
+	End                  int64    `protobuf:"varint,2,opt,name=end,proto3" json:"end,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -58,14 +58,14 @@ func (m *RangeMsg) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_RangeMsg proto.InternalMessageInfo
 
-func (m *RangeMsg) GetStart() int32 {
+func (m *RangeMsg) GetStart() int64 {
 	if m != nil {
 		return m.Start
 	}
 	return 0
 }
 
-func (m *RangeMsg) GetEnd() int32 {
+func (m *RangeMsg) GetEnd() int64 {
 	if m != nil {
 		return m.End
 	}
@@ -73,7 +73,7 @@ func (m *RangeMsg) GetEnd() int32 {
 }
 
 type HexMsg struct {
-	HexID                int32    `protobuf:"varint,1,opt,name=hexID,proto3" json:"hexID,omitempty"`
+	HexID                int64    `protobuf:"varint,1,opt,name=hexID,proto3" json:"hexID,omitempty"`
 	Para                 bool     `protobuf:"varint,2,opt,name=para,proto3" json:"para,omitempty"`
 	Txt                  string   `protobuf:"bytes,3,opt,name=txt,proto3" json:"txt,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -106,7 +106,7 @@ func (m *HexMsg) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_HexMsg proto.InternalMessageInfo
 
-func (m *HexMsg) GetHexID() int32 {
+func (m *HexMsg) GetHexID() int64 {
 	if m != nil {
 		return m.HexID
 	}
@@ -167,9 +167,9 @@ func (m *ArrHexMsg) GetHexes() []*HexMsg {
 }
 
 type HexWordMsg struct {
-	HexID                int32    `protobuf:"varint,1,opt,name=hexID,proto3" json:"hexID,omitempty"`
-	Order                int32    `protobuf:"varint,2,opt,name=order,proto3" json:"order,omitempty"`
-	WordID               int32    `protobuf:"varint,3,opt,name=wordID,proto3" json:"wordID,omitempty"`
+	HexID                int64    `protobuf:"varint,1,opt,name=hexID,proto3" json:"hexID,omitempty"`
+	Order                int64    `protobuf:"varint,2,opt,name=order,proto3" json:"order,omitempty"`
+	WordID               int64    `protobuf:"varint,3,opt,name=wordID,proto3" json:"wordID,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
@@ -200,21 +200,21 @@ func (m *HexWordMsg) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_HexWordMsg proto.InternalMessageInfo
 
-func (m *HexWordMsg) GetHexID() int32 {
+func (m *HexWordMsg) GetHexID() int64 {
 	if m != nil {
 		return m.HexID
 	}
 	return 0
 }
 
-func (m *HexWordMsg) GetOrder() int32 {
+func (m *HexWordMsg) GetOrder() int64 {
 	if m != nil {
 		return m.Order
 	}
 	return 0
 }
 
-func (m *HexWordMsg) GetWordID() int32 {
+func (m *HexWordMsg) GetWordID() int64 {
 	if m != nil {
 		return m.WordID
 	}
@@ -222,7 +222,7 @@ func (m *HexWordMsg) GetWordID() int32 {
 }
 
 type WordMsg struct {
-	Id                   int32    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id                   int64    `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Txt                  string   `protobuf:"bytes,2,opt,name=txt,proto3" json:"txt,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
@@ -254,7 +254,7 @@ func (m *WordMsg) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_WordMsg proto.InternalMessageInfo
 
-func (m *WordMsg) GetId() int32 {
+func (m *WordMsg) GetId() int64 {
 	if m != nil {
 		return m.Id
 	}
@@ -324,7 +324,7 @@ func (m *ArrTranslatableMsg) GetHexWords() []*HexWordMsg {
 }
 
 type ScannedMsg struct {
-	HexID                int32    `protobuf:"varint,1,opt,name=hexID,proto3" json:"hexID,omitempty"`
+	HexID                int64    `protobuf:"varint,1,opt,name=hexID,proto3" json:"hexID,omitempty"`
 	Scanned              string   `protobuf:"bytes,2,opt,name=scanned,proto3" json:"scanned,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
@@ -356,7 +356,7 @@ func (m *ScannedMsg) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_ScannedMsg proto.InternalMessageInfo
 
-func (m *ScannedMsg) GetHexID() int32 {
+func (m *ScannedMsg) GetHexID() int64 {
 	if m != nil {
 		return m.HexID
 	}
@@ -432,13 +432,13 @@ var fileDescriptor_c85bb07bffd332d8 = []byte{
 	0x81, 0x81, 0xfe, 0xfa, 0x7b, 0x4c, 0xf3, 0x94, 0x74, 0x74, 0x38, 0x1a, 0xc7, 0x69, 0x1a, 0xef,
 	0x44, 0x20, 0xd3, 0xeb, 0x87, 0xbb, 0x40, 0xdc, 0xef, 0xf3, 0x27, 0xd5, 0x45, 0x43, 0xe8, 0x46,
 	0x2c, 0x89, 0xc5, 0x45, 0x16, 0x93, 0x01, 0xb8, 0x59, 0xce, 0x30, 0xf7, 0xac, 0x89, 0x35, 0x75,
-	0x23, 0x15, 0x90, 0x3e, 0x38, 0x22, 0xe1, 0x9e, 0x2d, 0x73, 0xe5, 0x93, 0xce, 0xa1, 0xbd, 0x14,
+	0x22, 0x15, 0x90, 0x3e, 0x38, 0x22, 0xe1, 0x9e, 0x2d, 0x73, 0xe5, 0x93, 0xce, 0xa1, 0xbd, 0x14,
 	0x85, 0x46, 0x6c, 0x44, 0xb1, 0x9a, 0x1b, 0x84, 0x0c, 0x08, 0x81, 0x2f, 0x7b, 0x86, 0x4c, 0x42,
 	0xba, 0x91, 0x7c, 0x97, 0x2c, 0x79, 0x91, 0x7b, 0xce, 0xc4, 0x9a, 0xf6, 0xa2, 0xf2, 0x49, 0x43,
 	0xe8, 0xcd, 0x10, 0x35, 0xd1, 0x5f, 0x49, 0x24, 0x32, 0xcf, 0x9a, 0x38, 0xd3, 0xaf, 0xe1, 0x4f,
 	0xdf, 0x78, 0x51, 0xf5, 0x48, 0x55, 0xe9, 0x25, 0xc0, 0x52, 0x14, 0x37, 0x29, 0xf2, 0xcf, 0xa7,
 	0x0f, 0xc0, 0x4d, 0x91, 0x0b, 0xd4, 0x8a, 0x55, 0x40, 0x86, 0xd0, 0x7e, 0x4c, 0x91, 0xaf, 0xe6,
-	0x52, 0x82, 0x1b, 0xe9, 0x88, 0x1e, 0x41, 0xc7, 0xd0, 0xfd, 0x00, 0x7b, 0xcb, 0x35, 0x97, 0xbd,
+	0x52, 0x82, 0x13, 0xe9, 0x88, 0x1e, 0x41, 0xc7, 0xd0, 0xfd, 0x00, 0x7b, 0xcb, 0x35, 0x97, 0xbd,
 	0xe5, 0x46, 0xb2, 0x5d, 0x4b, 0x7e, 0xb6, 0x80, 0xcc, 0x10, 0xaf, 0x91, 0x25, 0xd9, 0x8e, 0xe5,
 	0x6c, 0xbd, 0x93, 0x7b, 0xfb, 0x07, 0x6e, 0xc9, 0x66, 0xc4, 0xf7, 0x2b, 0xf1, 0x9a, 0x39, 0x52,
 	0xe5, 0xda, 0xa4, 0x7d, 0xc8, 0x24, 0x09, 0xa0, 0xbb, 0x51, 0x26, 0x33, 0xcf, 0x91, 0x9d, 0xbf,
@@ -448,7 +448,7 @@ var fileDescriptor_c85bb07bffd332d8 = []byte{
 	0xaf, 0x0a, 0x60, 0x2e, 0x6b, 0x44, 0xaa, 0x54, 0xf5, 0xcb, 0x69, 0x8b, 0x2c, 0xe0, 0x5b, 0x73,
 	0x95, 0x64, 0xe8, 0xab, 0x4b, 0xf5, 0xcd, 0xa5, 0xfa, 0x8b, 0xf2, 0x52, 0x47, 0xe3, 0x26, 0xfa,
 	0xdd, 0xf2, 0x69, 0x8b, 0x9c, 0x1a, 0x0d, 0xfc, 0xa3, 0xd1, 0xc3, 0x26, 0xb8, 0x76, 0x40, 0x5b,
-	0xeb, 0xb6, 0x1c, 0x73, 0xf2, 0x1a, 0x00, 0x00, 0xff, 0xff, 0xe9, 0x52, 0xea, 0x45, 0x40, 0x03,
+	0xeb, 0xb6, 0x1c, 0x73, 0xf2, 0x1a, 0x00, 0x00, 0xff, 0xff, 0x9c, 0x54, 0xd1, 0xd4, 0x40, 0x03,
 	0x00, 0x00,
 }
 

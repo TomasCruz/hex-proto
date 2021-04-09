@@ -3,12 +3,12 @@ import "google/protobuf/empty.proto";
 package scanner;
 
 message RangeMsg {
-    int32 start = 1;
-    int32 end = 2;
+    int64 start = 1;
+    int64 end = 2;
 }
 
 message HexMsg {
-    int32 hexID = 1;
+    int64 hexID = 1;
     bool para = 2;
     string txt = 3;
 }
@@ -18,13 +18,13 @@ message ArrHexMsg {
 }
 
 message HexWordMsg {
-    int32 hexID = 1;
-    int32 order = 2;
-    int32 wordID = 3;
+    int64 hexID = 1;
+    int64 order = 2;
+    int64 wordID = 3;
 }
 
 message WordMsg {
-    int32 id = 1;
+    int64 id = 1;
     string txt = 2;
 }
 
@@ -35,7 +35,7 @@ message ArrTranslatableMsg {
 }
 
 message ScannedMsg {
-    int32 hexID = 1;
+    int64 hexID = 1;
     string scanned = 2;
 }
 

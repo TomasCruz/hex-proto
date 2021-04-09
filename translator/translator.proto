@@ -1,11 +1,10 @@
 syntax = "proto3";
 import "google/protobuf/empty.proto";
+import "scanner/scanner.proto";
 package translator;
 
-import "scanner/scanner.proto";
-
 message LangMsg {
-    int32 id = 1;
+    int64 id = 1;
     string name = 2;
 }
 
@@ -14,17 +13,17 @@ message ArrLangMsg {
 }
 
 message CountMsg {
-    int32 count = 1;
+    int64 count = 1;
 }
 
 message HexLangMsg {
-    int32 hexID = 1;
-    int32 langID = 2;
+    int64 hexID = 1;
+    int64 langID = 2;
 }
 
 message HWLangMsg {
     HexLangMsg hexLang = 1;
-    int32 order = 2;
+    int64 order = 2;
 }
 
 message HWTransMsg {
@@ -34,7 +33,7 @@ message HWTransMsg {
 }
 
 message TransMsg {
-    int32 hexID = 1;
+    int64 hexID = 1;
     string trans = 2;
 }
 

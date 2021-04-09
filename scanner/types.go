@@ -2,20 +2,20 @@ package scanner
 
 type (
 	Hexameter struct {
-		HexID int32
+		HexID int64
 		Para  bool
 		Txt   string
 	}
 
 	Word struct {
-		ID  int32
+		ID  int64
 		Txt string
 	}
 
 	HexWord struct {
-		HexID  int32
-		Order  int32
-		WordID int32
+		HexID  int64
+		Order  int64
+		WordID int64
 	}
 
 	Translatable struct {

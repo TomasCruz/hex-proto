@@ -2,22 +2,22 @@ package translator
 
 type (
 	Lang struct {
-		ID   int
+		ID   int64
 		Name string
 	}
 
 	HexLang struct {
-		HexID  int32
-		LangID int32
+		HexID  int64
+		LangID int64
 	}
 
 	Count struct {
-		Count int32
+		Count int64
 	}
 
 	HWLang struct {
 		HexLang HexLang
-		Order   int32
+		Order   int64
 	}
 
 	HWTrans struct {
@@ -27,7 +27,7 @@ type (
 	}
 
 	Trans struct {
-		HexID       int32
+		HexID       int64
 		Translation string
 	}
 )
