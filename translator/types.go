@@ -2,32 +2,32 @@ package translator
 
 type (
 	Lang struct {
-		ID   int64
-		Name string
+		ID   int64  `json:"id"`
+		Name string `json:"name"`
 	}
 
 	HexLang struct {
-		HexID  int64
-		LangID int64
+		HexID  int64 `json:"hex_id"`
+		LangID int64 `json:"lang_id"`
 	}
 
 	Count struct {
-		Count int64
+		Count int64 `json:"count"`
 	}
 
 	HWLang struct {
-		HexLang HexLang
-		Order   int64
+		HexLang HexLang `json:"hex_lang"`
+		Order   int64   `json:"order"`
 	}
 
 	HWTrans struct {
-		HWLang      HWLang
-		Grammar     string
-		Translation string
+		HWLang      HWLang `json:"hw_lang"`
+		Grammar     string `json:"grammar"`
+		Translation string `json:"translation"`
 	}
 
 	Trans struct {
-		HexID       int64
-		Translation string
+		HexID       int64  `json:"hex_id"`
+		Translation string `json:"translation"`
 	}
 )
