@@ -22,12 +22,11 @@ type (
 
 	HWTrans struct {
 		HWLang      HWLang `json:"hw_lang"`
-		Grammar     string `json:"grammar"`
 		Translation string `json:"translation"`
 	}
 
 	Trans struct {
-		HexID       int64  `json:"hex_id"`
-		Translation string `json:"translation"`
+		HexLang     HexLang `json:"hex_lang"`
+		Translation string  `json:"translation"`
 	}
 )

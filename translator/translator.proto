@@ -28,12 +28,11 @@ message HWLangMsg {
 
 message HWTransMsg {
     HWLangMsg hwLang = 1;
-    string grammar = 2;
-    string trans = 3;
+    string trans = 2;
 }
 
 message TransMsg {
-    int64 hexID = 1;
+    HexLangMsg hexLang = 1;
     string trans = 2;
 }
 
