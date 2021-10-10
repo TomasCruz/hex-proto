@@ -44,6 +44,7 @@ service Translator {
     rpc SetHWTrans(HWTransMsg) returns (google.protobuf.Empty) {}
 
     rpc W2WTrans(HexLangMsg) returns (TransMsg) {}
+    rpc SetW2WTrans(TransMsg) returns (google.protobuf.Empty) {}
 
     rpc Trans(HexLangMsg) returns (TransMsg) {}
     rpc SetTrans(TransMsg) returns (google.protobuf.Empty) {}
