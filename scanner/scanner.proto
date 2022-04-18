@@ -40,8 +40,10 @@ message ScannedMsg {
     string txt = 3;
     string scanned = 4;
     string musicalTemplate = 5;
-    int64 scanningVariety = 6; 
-    repeated string words = 7;
+    int64 scanningVariety = 6;
+    int64 mainCaesura = 7;
+    repeated int64 caesurae = 8;
+    repeated string words = 9;
 }
 
 message ArrScannedMsg {
