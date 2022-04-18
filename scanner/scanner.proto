@@ -36,7 +36,12 @@ message ArrTranslatableMsg {
 
 message ScannedMsg {
     int64 hexID = 1;
-    string scanned = 2;
+    bool para = 2;
+    string txt = 3;
+    string scanned = 4;
+    string musicalTemplate = 5;
+    int64 scanningVariety = 6; 
+    repeated string words = 7;
 }
 
 message ArrScannedMsg {
