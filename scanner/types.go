@@ -30,6 +30,7 @@ type (
 		Txt             string   `json:"txt"`
 		Scanned         string   `json:"scanned"`
 		MusicalTemplate string   `json:"musical_template"`
+		ChangeCount     int      `json:"change_count"`
 		ScanningVariety int      `json:"scanning_variety"`
 		MainCaesura     int      `json:"main_caesura"`
 		Caesurae        []int    `json:"caesurae"`
