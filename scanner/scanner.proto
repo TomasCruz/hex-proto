@@ -40,18 +40,26 @@ message ScannedMsg {
     string txt = 3;
     string scanned = 4;
     string musicalTemplate = 5;
-    int64 scanningVariety = 6;
-    int64 mainCaesura = 7;
-    repeated int64 caesurae = 8;
-    repeated string words = 9;
+    int64 changeCount = 6;
+    int64 scanningVariety = 7;
+    int64 mainCaesura = 8;
+    repeated int64 caesurae = 9;
+    repeated string words = 10;
 }
 
 message ArrScannedMsg {
     repeated ScannedMsg hexes = 1;
 }
 
+message HexIntMsg {
+    int64 hexID = 1;
+    int64 x = 2;
+}
+
 service Scanner {
     rpc Hexes(RangeMsg) returns (ArrHexMsg) {}
     rpc Translatable(google.protobuf.Empty) returns (ArrTranslatableMsg) {}
     rpc Scanned(RangeMsg) returns (ArrScannedMsg) {}
+    rpc ChooseVariety(HexIntMsg) returns (google.protobuf.Empty) {}
+    rpc ChooseCaesura(HexIntMsg) returns (google.protobuf.Empty) {}
 }
