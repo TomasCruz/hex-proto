@@ -32,6 +32,7 @@ type (
 		MusicalTemplate string   `json:"musical_template"`
 		ChangeCount     int      `json:"change_count"`
 		ScanningVariety int      `json:"scanning_variety"`
+		Selected        bool     `json:"selected"`
 		MainCaesura     int      `json:"main_caesura"`
 		Caesurae        []int    `json:"caesurae"`
 		Words           []string `json:"words"`
