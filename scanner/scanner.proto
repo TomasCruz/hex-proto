@@ -42,7 +42,7 @@ message ScannedMsg {
     string musicalTemplate = 5;
     int64 changeCount = 6;
     int64 scanningVariety = 7;
-    int64 selected = 8;
+    bool selected = 8;
     int64 mainCaesura = 9;
     repeated int64 caesurae = 10;
     repeated string words = 11;
