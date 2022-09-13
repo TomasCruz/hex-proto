@@ -7,8 +7,7 @@ clean:
 
 .PHONY: scanner
 scanner:
-	protoc --go_out=plugins=grpc:. scanner/scanner.proto
-
+	protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative scanner/scanner.proto
 .PHONY: translator
 translator:
-	protoc --go_opt=Mscanner/scanner.proto=github.com/TomasCruz/hex-proto/scanner --go_out=plugins=grpc:. translator/translator.proto
+	protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative translator/translator.proto

@@ -2,6 +2,7 @@ syntax = "proto3";
 import "google/protobuf/empty.proto";
 import "scanner/scanner.proto";
 package translator;
+option go_package = "github.com/TomasCruz/hex-proto/translator";
 
 message LangMsg {
     int64 id = 1;
